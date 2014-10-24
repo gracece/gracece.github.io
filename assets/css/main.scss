@@ -213,7 +213,6 @@ header.main-header {
   }
 
   ul li span {
-    float: left;
     display: inline-block;
     width: 15px;
   }
@@ -614,11 +613,11 @@ div.posts {
 }
 div.post {
   padding-top: .5em;
-  padding-bottom: 1em;
+  padding-bottom: .5em;
   border-bottom: 1px $base-05 solid;
   @include MQ(M) {
 
-    padding-bottom: 2em;  
+    padding-bottom: .5em;  
   }
 
   &:last-child {
@@ -632,7 +631,7 @@ span.post-date {
   @include font-size(12px);
   overflow: hidden;
   display: block;
-  padding: 1em 0;
+  padding: .5em 0;
 
   @include MQ(M) {
     @include font-size(16px);
