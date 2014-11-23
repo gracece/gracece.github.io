@@ -37,7 +37,7 @@ Linux+Apache2 的环境下，还需要配置一个模块 `mod_xsendfile`才可�
 + 安装模块
 
 	下载源代码，使用apache2提供的工具进行编译安装，`apxs -cia mod_xsendfile.c`，可能提示无法找到`apxs`，则先安装
-	`apache2-prefork-dev`，重启apache2即可。
+	`apache2-prefork-dev`，重启apache2即可。 如果是用 apache2.4,那应该尝试安装`apache2-dev`。
 
 + 配置apache2
 
