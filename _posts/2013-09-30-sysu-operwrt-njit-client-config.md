@@ -48,6 +48,51 @@ DB-120可以使用OH3C，请查看[南浦月博文](http://blog.nanpuyue.com/201
 
 复制上面的文本（[Raw](https://gist.github.com/gracece/1b068090411fd4d9b4e6/raw/12571386d2ca99bde898f53f2073d4e98b5dc05d/openwrt+network++config) )，并覆盖到 `/etc/config/network` ，重启网络服务，可能会断开ssh连接。
 
+*update 2015-03-01*
+ 如果刷的是Barrier Breaker 14.07 及之后的系统，network 的配置有变化，请使用以下配置:
+
+    config interface 'loopback'
+        option ifname 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+
+    config globals 'globals'
+        option ula_prefix 'fd8f:f70e:d6ed::/48'
+
+    config interface 'lan'
+        option ifname 'eth1'
+        option force_link '1'
+        option type 'bridge'
+        option proto 'static'
+        option ipaddr '192.168.1.1'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+
+    config interface 'wan'
+        option ifname 'eth1.1'
+        option proto 'dhcp'
+
+    config interface 'wan6'
+        option ifname 'eth1.1'
+        option proto 'dhcpv6'
+
+    config switch
+        option name 'eth1'
+        option reset '1'
+        option enable_vlan '1'
+
+    config switch_vlan
+        option device 'eth1'
+        option vlan '0'
+        option ports '0 1 2 5t'
+
+    config switch_vlan
+        option device 'eth1'
+        option vlan '1'
+        option ports '3 5t'
+
+
 ### 安装libpcap
 
 libcap是njit-client 的依赖包，在[这里](http://pan.baidu.com/s/15QqVn)下载 cp.ipk 并传输到路由器内，使用opkg install 安装。
@@ -64,7 +109,7 @@ libcap是njit-client 的依赖包，在[这里](http://pan.baidu.com/s/15QqVn)�
 
 ### 简易开机自动拨号脚本
 
-已经在[openwrt 配置备忘](http://gracece.net/2012/11/openwrt-settings-note/)中说明，请移步查看。
+已经在[openwrt 配置备忘](http://gracece.com/2012/11/openwrt-settings-note/)中说明，请移步查看。
 
 
 以上就是所有配置步骤。
