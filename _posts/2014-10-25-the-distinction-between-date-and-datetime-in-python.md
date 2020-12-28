@@ -16,7 +16,7 @@ Python 中提供了对时间日期的多种多样的处理方式，主要是在 
 所以要特别注意有些函数是平台相关的，可能会在不同的平台有不同的效果。另外一点是，由于是基于Unix Timestamp，所以其所能表述的日期范围被限定在
 **1970 - 2038** 之间，如果你写的代码需要处理在前面所述范围之外的日期，那可能需要考虑使用`datetime`模块更好。文档解释比较费劲，具体看看怎么用：
 
-{% highlight python %}
+```
 In [1]: import time
 
 In [2]: time.time()
@@ -45,7 +45,7 @@ Out[10]: 'Sun, 26 Oct 2014 22:07:13 +0000'
 In [11]: time.strptime("30 Nov 00", "%d %b %y")
 Out[11]: time.struct_time(tm_year=2000, tm_mon=11, tm_mday=30, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=3, tm_yday=335, tm_isdst=-1)
 
-{% endhighlight %}
+```
 问题不大，可能有时候需要注意一下使用的时区。
 
 ### datetime
@@ -89,7 +89,7 @@ datetime.datetime 并无太大差别。 下面主要讲讲 datetime.datetime 的
 
 请注意，上面省略了很多和时区相关的函数，如需使用请查文档。对于日期的计算，使用`timedelta`也算是比较简单的：
 
-{% highlight python %}
+```
 In [1]: import datetime
 In [2]: time_now = datetime.datetime.now()
 In [3]: time_now
@@ -101,7 +101,7 @@ In [5]: print(time_now + delta1)
 
 In [6]: print(time_now - delta1)
 2014-10-26 20:46:16.657523
-{% endhighlight %}
+```
 甚至两个 datetime 对象直接相减就能获得一个 timedelta 对象。如果有需要计算工作日的需求，可以使用
 [business_calendar](https://pypi.python.org/pypi/business_calendar/)这个库，不需要装其他依赖就可使用。
 

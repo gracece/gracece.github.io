@@ -14,7 +14,7 @@ tags:
 
 ### 堆排序
 
-{% highlight python %}
+```
 #!/usr/bin/python
 #coding:utf-8
 # glygo@qq.com
@@ -45,11 +45,11 @@ if __name__ == '__main__':
     data= [4,1,12,3,112,15,1121,44,3,44,666]
     heap_sort(data)
     print data
-{% endhighlight %}
+```
 ###归并排序
 在写归并排序的时候就真真切切感受到了python切片功能的强大，可以少写好几个循环，同时代码可读性也不受影响。
 
-{% highlight python %}
+```
 #!/usr/bin/python
 #coding:utf-8
 # glygo@qq.com
@@ -85,9 +85,9 @@ def main():
 if __name__ == '__main__':
     main()
 
-{% endhighlight %}
+```
 ###全排列
-{% highlight python %}
+```
 #!/usr/bin/python
 #coding:utf-8
 # glygo@qq.com
@@ -106,9 +106,9 @@ if __name__ == "__main__":
     list_info = ['g','r','a','c','e']
     perm(list_info,0,5)
 
-{% endhighlight %}
+```
 ###快速排序
-{% highlight python %}
+```
 #!/usr/bin/python
 #coding:utf-8
 # glygo@qq.com
@@ -141,9 +141,9 @@ if __name__ == '__main__':
     quicksort(data,0,size-1)
     print data
 
-{% endhighlight %}
+```
 ###拓扑排序
-{% highlight python %}
+```
 #!/usr/bin/python
 #coding:utf-8
 # glygo@qq.com
@@ -184,4 +184,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-{% endhighlight %}
+```

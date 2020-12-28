@@ -22,7 +22,7 @@ tags:
 
 使用[JSON格式化工具](http://www.ostools.net/codeformat/json) 格式一下可以更好地分析：
 
-{% highlight json %}
+```json
 {
 "weatherinfo": {
         "city": "广州", 
@@ -111,14 +111,14 @@ tags:
     }
 }
 
-{% endhighlight %}
+```
 
 
 `temp1-6`为当前时间6天内的天气温度情况，`tempF1-6`为对应的华氏温度，另外下面还有一些对天气的描述，比如风力风速、今日穿衣指数 、48小时穿衣指数，紫外线、洗车、旅游、晨练、晾晒、过敏等。还有一些关键字没有弄懂代表的意思是什么。
 
 然后接下来就是在微信响应代码中加入一个响应天气的函数咯,这里用到了城市名称和城市代码的对应关系，具体在一个csv文件里面。[下载csv](http://pan.baidu.com/share/link?shareid=460829&uk=2032069257)：
 
-{% highlight php  %}
+```php
 
 public function weather($keyword)
 {
@@ -184,7 +184,7 @@ public function weather($keyword)
 
     }
 
-{% endhighlight %}
+```
 
 
 ### php中处理json的具体方法以及注意事项：

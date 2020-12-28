@@ -19,7 +19,7 @@ tags:
 
 njit-client开机启动 /etc/init.d/xclient
 
-{% highlight bash %}
+```bash
 #!/bin/sh /etc/rc.common
 #(c) 2012 grace
 START=50
@@ -34,7 +34,7 @@ killall njit-client
 killall udhcpc
 }
 
-{% endhighlight %}
+```
 
 然后 
 

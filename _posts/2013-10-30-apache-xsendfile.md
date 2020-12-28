@@ -55,7 +55,7 @@ Linux+Apache2 的环境下，还需要配置一个模块 `mod_xsendfile`才可�
 	参考tn123中的示例代码，加入自己所需要的功能即可。 
 	下的代码中，我加入了文件类型检测，使得对于pdf文件，浏览器能够直接打开，而不是保存为文件。关于Content-Type,可以参考
 	[OSTOOLS](http://www.ostools.net/commons),关于Content-Diposition,可参考[RFC6266](http://tools.ietf.org/html/rfc6266),这两个关键的属性决定了浏览器会怎么处理你使用xsendfile发过来的文件。filename属性要注意可能会产生的浏览器不兼容的问题，比如我上面写的在高贵的IE6上文件名就会乱码。
-    {% highlight php %}
+    ```php
     <?php
     //some other code
     if ($user->isLoggedIn())
@@ -77,7 +77,7 @@ Linux+Apache2 的环境下，还需要配置一个模块 `mod_xsendfile`才可�
     ?>
     <h1>Permission denied</h1>
     <p>Login first!</p>
-    {% endhighlight %}
+    ```
 
 
 

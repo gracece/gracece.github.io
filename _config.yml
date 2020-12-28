@@ -1,19 +1,19 @@
-# Harmony Jekyll theme general configurations 
+# Harmony Jekyll theme general configurations
 
 # Base URL
-baseurl: ''
+baseurl: ""
 
 # Site live URL
 url: http://gracece.com
 
-# Localhost 
-# url: http://127.0.0.1:4000  
+# Localhost
+# url: http://127.0.0.1:4000
 
 # Harmony theme configuration. Please change accordingly.
 harmony:
   name: Gracece's Blog
   # Little description about your site
-  description:  生命不息，折腾不止。
+  description: 生命不息，折腾不止。
   meta_description: 折腾不止
   basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
   author: # Author details
@@ -26,25 +26,28 @@ harmony:
   disqus_shortname: gracece
 
   # Profile links, leave blank to ignore
-  social: 
-    github: gracece 
+  social:
+    github: gracece
     twitter: guolyuan
-    facebook: 
-    gplus: 
-    dribble: 
-    pinterest: 
+    facebook:
+    gplus:
+    dribble:
+    pinterest:
   # Toggle disclaimer in footer
   show_disclaimer: false
 
-# Conversion / Build settings 
-markdown:    kramdown
-highlighter: pygments # this is how you put pygments config in jekyll 2.0 instead of pygments: true
+# Conversion / Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+#highlighter: pygments # this is how you put pygments config in jekyll 2.0 instead of pygments: true
+highlighter: rouge
 
 # Permalinks
-permalink: /:year/:month/:title 
+permalink: /:year/:month/:title
 #permalink:        pretty
 
-exclude: 
+exclude:
   - CNAME
   - Gemfile
   - Rakefile
@@ -55,5 +58,5 @@ exclude:
 
 # Sass conversion configs
 sass:
-    sass_dir: assets/css/_sass
-    style: :compressed
+  sass_dir: assets/css/_sass
+  style: :compressed

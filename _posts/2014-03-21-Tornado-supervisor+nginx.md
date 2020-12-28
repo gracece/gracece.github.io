@@ -16,7 +16,7 @@ tags:
 参考此文件，使用Tornado提供的options，可以解析命参数，到时候在后面加 --port=8001 就能
 按照指定端口执行，方便后面多进程。
 
-{% highlight python %}
+```python
 import tornado.httpserver
 import tornado.ioloop
 import tornado.options
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     http_server.listen(options.port)
     tornado.ioloop.IOLoop.instance().start()
     
-{% endhighlight %}
+```
 ### Supervisord
 使用pip安装，安装好之后默认是没有配置文件的，需要自行添加，位置是在 `/etc/supervisord.conf` 可以使用
 `echo_supervisord_conf >/etc/supervisord.conf` 生成默认配置，不过里面都是注释掉的。
@@ -107,7 +107,7 @@ if __name__ == "__main__":
 ###开机启动
 将下面保存为`/etc/rc.d/init.d/supervisord` 
 
-{% highlight bash %}
+```
 #!/bin/sh
 #
 # /etc/rc.d/init.d/supervisord
@@ -173,7 +173,7 @@ case "$1" in
  
 esac
 
-{% endhighlight %}
+```
 
 
 然后 
@@ -195,7 +195,7 @@ esac
 
 ### 2014-03-22补充一键脚本
 
-{% highlight bash %}
+```
 #/bin/bash
 # 2014-03-22
 yum install python-pip
@@ -221,7 +221,7 @@ wget -O /etc/rc.d/init.d/supervisord https://gist.githubusercontent.com/gracece/
 chmod +x /etc/rc.d/init.d/supervisord
 chkconfig --add supervisord
 ntsysv
-{% endhighlight %}
+```
 
 以上为粗放型安装Tornado+supervisor+nginx 脚本，适用于centos6,其他系统可能无法正常运行，默认端口为8888,nginx反向代理8001-8004 四个进程，
 默认py文件为/var/www/index.py ，如果需要更改，请修改/etc/supervisord.conf 里对应文件夹即可， 然后运行 supervisorctl reload all 重启进程。

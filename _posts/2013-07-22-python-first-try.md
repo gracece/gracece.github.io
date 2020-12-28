@@ -28,7 +28,7 @@ python脚本读取考生数据csv文件并暴力遍历出生年月，post到`htt
 ### 关键实现
 在python 强大的 `urllib` 以及 `urllib2` 面前，这些需求实现起来都算是比较轻松，定义一个post函数：
 
-{% highlight python %}
+```python
 def post(url,data):
 """for score post """
 req = urllib2.Request(url)
@@ -40,14 +40,14 @@ result =""
 for line in response:
     #分析处理line
 return result
-{% endhighlight %}
+```
 
 就是这么几行，就搞定了最关键的post数据以及分析响应内容。所以不得不感叹python的强大，其实一开始还想用php的curl来写的，我还真的写了...
 但是php的curl要依赖于apache才能运行，所以还是算了。写多了python再回去写php其实挺纠结的，尤其是
 要写`$`符号。
 
 ### 完整代码
-{% highlight python  linenos %}
+```python
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 
@@ -96,7 +96,7 @@ def main():
 
 if __name__ == '__main__':
     main()
-{% endhighlight %}
+```
 ### 不足
 
  * 太过暴力，没有对频率进行控制。其实脚本抓取，还是得讲究个度的
