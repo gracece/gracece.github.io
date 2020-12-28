@@ -68,7 +68,7 @@ if __name__ == "__main__":
     strapp:strategy3                 RUNNING    pid 12530, uptime 0:02:14
     strapp:strategy4                 RUNNING    pid 12527, uptime 0:02:14
 
-###Nginx
+### Nginx
 需要添加 upstream 并配反向代理
 
     upstream tornadoes {
@@ -104,10 +104,10 @@ if __name__ == "__main__":
 
     -A INPUT -p tcp  --dport 8001:8004 -j REJECT
 
-###开机启动
+### 开机启动
 将下面保存为`/etc/rc.d/init.d/supervisord` 
 
-```
+```shell
 #!/bin/sh
 #
 # /etc/rc.d/init.d/supervisord

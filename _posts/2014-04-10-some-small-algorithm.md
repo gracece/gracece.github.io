@@ -86,7 +86,7 @@ if __name__ == '__main__':
     main()
 
 ```
-###全排列
+### 全排列
 ```
 #!/usr/bin/python
 #coding:utf-8
