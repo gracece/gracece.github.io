@@ -47,7 +47,7 @@ https://www.adminer.org/
 **注意** 并不代表完全没有漏洞，需要及时更新最新版本。另外使用的时候最好再套一层basic auth，避免直接暴露，高压线警告⚠️。
 ![picture 4](/assets/pic/blog/0aafa69e292e4aaf8668dbbdb0fcdd1839bc8545ab009daed444dd610eabc3c8.png)  
 
-##### Thor HTTP 抓包嗅探分析&接口调试&断点重写
+##### 4. Thor HTTP 抓包嗅探分析&接口调试&断点重写
 [App Store 链接](https://apps.apple.com/cn/app/thor-http-%E6%8A%93%E5%8C%85%E5%97%85%E6%8E%A2%E5%88%86%E6%9E%90-%E6%8E%A5%E5%8F%A3%E8%B0%83%E8%AF%95-%E6%96%AD%E7%82%B9%E9%87%8D%E5%86%99/id1210562295)
 名字好长，我在比较早期购入的，现在的价格可能稍微高一点。总的来说是iOS上很好用的抓包分析工具，并且开发者还在不断更新更多新功能。
 
@@ -58,6 +58,6 @@ https://apps.apple.com/cn/app-bundle/thor-anubis-shu-%E7%BD%91%E7%BB%9C%E8%B0%83
  
 ![picture 6](/assets/pic/blog/4019b66d8f4cc06536f635b2989921dee9317237c014305634218dc7a6ddd8c1.png)  
 
-##### 结语
+##### 5. 结语
 其他想起来再补充。
 
