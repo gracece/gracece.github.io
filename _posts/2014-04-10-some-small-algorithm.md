@@ -14,7 +14,7 @@ tags:
 
 ### 堆排序
 
-```
+```python
 #!/usr/bin/python
 #coding:utf-8
 # glygo@qq.com
@@ -46,10 +46,11 @@ if __name__ == '__main__':
     heap_sort(data)
     print data
 ```
-###归并排序
+
+### 归并排序
 在写归并排序的时候就真真切切感受到了python切片功能的强大，可以少写好几个循环，同时代码可读性也不受影响。
 
-```
+```python
 #!/usr/bin/python
 #coding:utf-8
 # glygo@qq.com
@@ -87,7 +88,7 @@ if __name__ == '__main__':
 
 ```
 ### 全排列
-```
+```python
 #!/usr/bin/python
 #coding:utf-8
 # glygo@qq.com
@@ -107,8 +108,8 @@ if __name__ == "__main__":
     perm(list_info,0,5)
 
 ```
-###快速排序
-```
+### 快速排序
+```python
 #!/usr/bin/python
 #coding:utf-8
 # glygo@qq.com
@@ -142,8 +143,8 @@ if __name__ == '__main__':
     print data
 
 ```
-###拓扑排序
-```
+### 拓扑排序
+```python
 #!/usr/bin/python
 #coding:utf-8
 # glygo@qq.com

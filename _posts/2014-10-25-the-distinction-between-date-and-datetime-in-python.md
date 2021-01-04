@@ -16,7 +16,7 @@ Python 中提供了对时间日期的多种多样的处理方式，主要是在 
 所以要特别注意有些函数是平台相关的，可能会在不同的平台有不同的效果。另外一点是，由于是基于Unix Timestamp，所以其所能表述的日期范围被限定在
 **1970 - 2038** 之间，如果你写的代码需要处理在前面所述范围之外的日期，那可能需要考虑使用`datetime`模块更好。文档解释比较费劲，具体看看怎么用：
 
-```
+```python
 In [1]: import time
 
 In [2]: time.time()
@@ -62,34 +62,37 @@ datetime 比 time 高级了不少，可以理解为 datetime 基于 time 进行�
 datetime.datetime 并无太大差别。 下面主要讲讲 datetime.datetime 的使用。使用`datetime.datetime.now()`可以获得当前时刻的datetime.datetime 实例。
 对于一个 datetime.datetime 实例，主要会有以下属性及常用方法，看名称就能理解，应该没有太大问题：
 
-    datetime.year
-    datetime.month
-    datetime.day
-    datetime.hour
-    datetime.minute
-    datetime.second
-    datetime.microsecond
-    datetime.tzinfo
+```python
+datetime.year
+datetime.month
+datetime.day
+datetime.hour
+datetime.minute
+datetime.second
+datetime.microsecond
+datetime.tzinfo
 
-    datetime.date() # 返回 date 对象
-    datetime.time() # 返回 time 对象
-    datetime.replace(name=value) # 前面所述各项属性是 read-only 的，需要此方法才可更改
-    datetime.timetuple() # 返回time.struct_time 对象
-    dattime.strftime(format) # 按照 format 进行格式化输出
-    ...
+datetime.date() # 返回 date 对象
+datetime.time() # 返回 time 对象
+datetime.replace(name=value) # 前面所述各项属性是 read-only 的，需要此方法才可更改
+datetime.timetuple() # 返回time.struct_time 对象
+dattime.strftime(format) # 按照 format 进行格式化输出
+...
+```
 
 除了实例本身具有的方法,类本身也提供了很多好用的方法：
-
-    datetime.today()a  # 当前时间，localtime
-    datetime.now([tz]) # 当前时间默认 localtime
-    datetime.utcnow()  # UTC 时间
-    datetime.fromtimestamp(timestamp[, tz]) # 由 Unix Timestamp 构建对象
-    datetime.strptime(date_string, format)  # 给定时间格式解析字符串
-    ...
+```python
+datetime.today()  # 当前时间，localtime
+datetime.now([tz]) # 当前时间默认 localtime
+datetime.utcnow()  # UTC 时间
+datetime.fromtimestamp(timestamp[, tz]) # 由 Unix Timestamp 构建对象
+datetime.strptime(date_string, format)  # 给定时间格式解析字符串
+...
+```
 
 请注意，上面省略了很多和时区相关的函数，如需使用请查文档。对于日期的计算，使用`timedelta`也算是比较简单的：
 
-```
+```python
 In [1]: import datetime
 In [2]: time_now = datetime.datetime.now()
 In [3]: time_now

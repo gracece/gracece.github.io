@@ -22,11 +22,11 @@ godaddy注册的时候，.net的价格比.com低。但是上次续费的时候�
 ### 切换域名
 - 旧域名指向vps，使用nginx 301跳转到新域名
 
-    ```
-server {
-    server_name gracece.net;
-    rewrite ^(.*) http://gracece.com$1 permanent;
-}
+    ```nginx
+    server {
+        server_name gracece.net;
+        rewrite ^(.*) http://gracece.com$1 permanent;
+    }
     ```
 - 新域名指向github page,具体可以看[Setting up a custom domain with GitHub Pages](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages#step-2-configure-dns-records)
 和[Faster, More Awesome GitHub Pages](https://github.com/blog/1715-faster-more-awesome-github-pages),

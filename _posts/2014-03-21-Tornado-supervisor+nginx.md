@@ -195,7 +195,7 @@ esac
 
 ### 2014-03-22补充一键脚本
 
-```
+```bash
 #/bin/bash
 # 2014-03-22
 yum install python-pip
