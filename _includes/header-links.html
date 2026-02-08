@@ -1,13 +1,5 @@
-<ul>
-	<li>
-    <a href="{{ '/' | prepend: site.baseurl  }}">Home</a>
-	</li>
-	<li>
-    <span>/</span>
-    <a href="{{ '/about' | prepend: site.baseurl }}">About</a>
-	</li>
-  <li>
-    <span>/</span>
-		<a href="{{ '/archive.html' | prepend: site.baseurl }}">Archive</a>
-	</li>
-</ul>
+<nav class="nav-links">
+	<a href="{{ '/' | prepend: site.baseurl }}" class="nav-link">Home</a>
+	<a href="{{ '/about' | prepend: site.baseurl }}" class="nav-link">About</a>
+	<a href="{{ '/archive.html' | prepend: site.baseurl }}" class="nav-link">Archive</a>
+</nav>

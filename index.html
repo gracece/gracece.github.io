@@ -4,19 +4,23 @@ layout: default
 <div id="home" class="page-content wc-container">
 	<div class="posts">
   		{% for post in site.posts limit:10 %}
-  			<div class="post">
-    			<h3 class="post-title">
-			      <a href="{{ post.url | prepend: site.baseurl  }}">
-			        {{ post.title }}
-			      </a>
-    			</h3>
-    			<span class="post-date">{{ post.date | date: "%F" }}</span>
-  				<p> {{ post.description | default: post.excerpt | strip_html | truncate: 160 }}</p>
-  			</div>
+  			<article class="post-card">
+    			<div class="post-card-inner">
+	    			<h3 class="post-title">
+				      <a href="{{ post.url | prepend: site.baseurl }}">
+				        {{ post.title }}
+				      </a>
+	    			</h3>
+	    			<time class="post-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+	  				<p class="post-excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 160 }}</p>
+  				</div>
+  				<span class="post-arrow">→</span>
+  			</article>
   		{% endfor %}
 	</div>
-	<div class="post-footer">
-    <div class="column-full"><a href="{{ '/archive.html' | prepend: site.baseurl }}">
-        查看所有{{site.posts.size}}篇文章 </a></div>
+	<div class="view-all">
+	    <a href="{{ '/archive.html' | prepend: site.baseurl }}" class="btn-ghost">
+	        查看所有 {{ site.posts.size }} 篇文章
+	    </a>
 	</div>
 </div>
