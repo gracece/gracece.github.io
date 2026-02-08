@@ -4,19 +4,25 @@ title: About me
 permalink: /about/
 ---
 
-- CST, Sun Yat-sen University, 2011 - 2015
-- DevOps, Tencent Wechat, May 2014 – Present
-- Ubuntu -> Arch Linux -> Ubuntu -> Mac OS X
-- Vim -> VS Code
-- Python -> Golang
+### 关于我
 
+中山大学计算机专业毕业（2011 - 2015），2014 年以实习生身份进入腾讯，2015 年正式入职，到现在十二年了。
+
+### 职业经历
+
+先在微信技术架构部待了五年多，主要负责内部运营系统的支撑维护，包括变更发布系统和 CMDB 系统等，也参与过监控系统的开发。
+
+后来因工作和生活原因调动到深圳，进入微信搜一搜部门，负责搜一搜各类支撑系统的建设，包括评测系统、标注系统，也涉及一些抓取系统。
+
+最近两年重心转向 AI 领域的运营支撑，主要做搜一搜内部统一 OpenAI 协议的接口开发，以及 AI 评测相关的工作流、工具建设和流程优化。
+
+### 这个博客
+
+早期文章是学生时代写的，工作后就很少更新了，一荒废就是十年。2026 年打算重新开始，记录一些技术笔记和工作中的经验。
 
 ### 联系我
 
-可以直接给我( [guolyuan@gmail.com](mailto:guolyuan@gmail.com) ) 发邮件:)
+邮箱：[guolyuan@gmail.com](mailto:guolyuan@gmail.com)
 
 
-[jekyll]: http://jekyllrb.com
-[github]: https://github.com/gracece
-[twitter]: https://twitter.com/guolyuan
-[v2ex]: https://www.v2ex.com/member/gracece
+*最后更新于 2026-02-08*
