@@ -9,9 +9,9 @@ layout: default
 			      <a href="{{ post.url | prepend: site.baseurl  }}">
 			        {{ post.title }}
 			      </a>
-    			<span class="post-date">{{ post.date | date: "%F" }}</span>
     			</h3>
-  				<p> {{ post.description }}</p>
+    			<span class="post-date">{{ post.date | date: "%F" }}</span>
+  				<p> {{ post.description | default: post.excerpt | strip_html | truncate: 160 }}</p>
   			</div>
   		{% endfor %}
 	</div>

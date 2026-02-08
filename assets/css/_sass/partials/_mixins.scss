@@ -1,7 +1,8 @@
 // rem fallback - credits: http://zerosixthree.se/
+@use "sass:math";
 
 @function calculateRem($size) {
-  $remSize: $size / 16px;
+  $remSize: math.div($size, 16px);
   @return $remSize * 1rem;
 }
 
